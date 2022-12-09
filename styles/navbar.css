@@ -1,10 +1,20 @@
 body {
-	font-family: "Century Gothic", 'Lato', sans-serif;
+	/* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+	font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	text-shadow: 0rem 2rem 1rem rgba(0,0,0,0.2);
 }
 
 a {
 	text-decoration: none;
 }
+
+:root{
+	--primary-foreground: #fff;
+	--primary-background: #eee;
+	--secondary-foreground: #000;
+	--secondary-background: rgba(70, 70, 70, 0.333);
+}
+
 
 .navbar-tabs,
 .nav-slide {
@@ -14,22 +24,25 @@ a {
 	align-items: center;
 	height: 100vh;
 	position: relative;
-	background: #eee;
+	background: var(--primary-background);
 	text-align: center;
 	padding: 0 2em;
 }
 
 .navbar-tabs h1,
-  .nav-slide h1 {
+.nav-slide h1 {
 	font-size: 2rem;
 	margin: 0;
-	letter-spacing: 1rem;
+	letter-spacing: 0.5rem;
+	/* text-shadow: 0.15rem 0.1rem var(--secondary-background); */
+	
 }
 
 .navbar-tabs h3,
-  .nav-slide h3 {
+.nav-slide h3 {
 	font-size: 1rem;
-	letter-spacing: 0.3rem;
+	text-shadow: 0.05rem 0.05rem var(--secondary-background);
+	letter-spacing: 0.1rem;
 	opacity: 0.6;
 }
 
@@ -40,8 +53,10 @@ a {
 	bottom: 0;
 	width: 100%;
 	height: 70px;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 0 20px var(--secondary-background);
+	/* text-shadow: 0.05rem 0.05rem var(--secondary-background); */
+	background: var(--primary-foreground);
 	z-index: 10;
 }
 
@@ -55,16 +70,20 @@ a {
 	justify-content: center;
 	align-items: center;
 	flex: 1;
-	color: #000;
+	color: var(--secondary-foreground);
 	letter-spacing: 0.1rem;
 	transition: all 0.5s ease;
 	font-size: 0.8rem;
+	font-weight: bolder;
 }
 
 .navbar-tab:hover {
-	color: white;
-	background: rgba(141, 141, 141, 0.8);
+	color: var(--primary-foreground);
+	background: var(--secondary-foreground);
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
 	transition: all 0.5s ease;
+	text-shadow: none;
 }
 
 .navbar-tab-slider {
@@ -72,18 +91,24 @@ a {
 	bottom: 0;
 	width: 0;
 	height: 6px;
-	background: rgba(141, 141, 141, 0.8);
+	border-radius: 0.3em;
+	background: rgb(0, 0, 0);
 	transition: left 0.3s ease;
 }
 
+/* please dont judge this bcuz i dont know what i did either */
+
+
+
 @media (min-width: 800px) {
+
 	.navbar-tabs h1,
-  .nav-slide h1 {
-		font-size: 3rem;
+	.nav-slide h1 {
+		font-size: 4rem;
 	}
 
 	.navbar-tabs h3,
-  .nav-slide h3 {
+	.nav-slide h3 {
 		font-size: 1rem;
 	}
 
@@ -91,3 +116,19 @@ a {
 		font-size: 1rem;
 	}
 }
+
+/* @media (max-width: 800px) {
+	.navbar-tabs h1,
+	.nav-slide h1 {
+		font-size: 5rem;
+	}
+
+	.navbar-tabs h3,
+	.nav-slide h3 {
+		font-size: 1.5rem;
+	}
+
+	.navbar-tab {
+		font-size: 1.5rem;
+	}
+} */
