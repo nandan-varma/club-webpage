@@ -15,6 +15,15 @@ a {
 	--secondary-background: rgba(70, 70, 70, 0.333);
 }
 
+::-moz-selection{
+	color: #fff;
+	background-color: #222;
+}
+::selection{
+	color: #fff;
+	background-color: #222;
+}
+
 
 .navbar-tabs,
 .nav-slide {
@@ -100,7 +109,7 @@ a {
 
 
 
-@media (min-width: 800px) {
+@media (max-height: 1000px) {
 
 	.navbar-tabs h1,
 	.nav-slide h1 {
@@ -117,18 +126,21 @@ a {
 	}
 }
 
-/* @media (max-width: 800px) {
+@media (min-height: 1000px) {
 	.navbar-tabs h1,
 	.nav-slide h1 {
-		font-size: 5rem;
+		font-size: 100px;
 	}
 
 	.navbar-tabs h3,
 	.nav-slide h3 {
-		font-size: 1.5rem;
+		font-size: 35px;
+	}
+	p{
+		font-size: 25px;;
 	}
 
 	.navbar-tab {
-		font-size: 1.5rem;
+		font-size: 30px;
 	}
-} */
+}
