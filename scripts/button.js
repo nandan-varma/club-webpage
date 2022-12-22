@@ -1,7 +1,11 @@
 let info = {
-    "about":"bvrit.ac.in",
+    "about":"https://www.bvrit.ac.in",
 }
 
 function LearnMore(element){
-    window.location = "https://www."+info[element];
+    window.location = info[element];
+}
+
+function SwitchMode() {
+    document.body.classList.toggle("dark-mode");
 }
