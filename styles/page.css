@@ -1,0 +1,28 @@
+.header {
+    background-color: var(--PB);
+    box-shadow: 1px 1px 4px 0 var(--PF);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    opacity: 0.7;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 1% 2%;
+    text-decoration: none;
+}
+
+article{
+    padding: 10%;
+    white-space: pre-line;
+    font-size: x-large;
+}
+
+article br {
+    display: block;
+    content: ""; 
+    margin-top: 24px; 
+}
